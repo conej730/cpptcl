@@ -53,7 +53,6 @@ list(APPEND HDRS_DETAILS ${cpptcl_SOURCE_DIR}/cpptcl/details/methods_v.h)
 list(APPEND HDRS_DETAILS ${cpptcl_SOURCE_DIR}/cpptcl/details/bind.h)
 
 add_library(cpptcl STATIC ${SRCS} ${HDRS} ${HDRS_DETAILS})
-target_sources(cpptcl PUBLIC ${HDRS})
 target_link_libraries(cpptcl ${TCL_STUB_LIBRARY})
 install(TARGETS cpptcl ARCHIVE DESTINATION lib)
 install(FILES ${HDRS} DESTINATION include/cpptcl)
